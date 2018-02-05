@@ -1,0 +1,64 @@
+.track,
+.intro
+  .teacher__avatar
+    height: 60px
+    width: 60px
+
+    img
+      height: 100%
+      max-width: 100%
+
+  .skills__item
+    border: 1px #000000 solid
+    height: 37px
+    line-height: 37px
+    font-size: 16px
+    font-weight: 900
+    text-align: center
+    box-sizing (border-box)
+
+  .teacher
+    margin-bottom: 20px
+    &__name
+      font-weight: 900
+      text-decoration: underline
+      margin-bottom: 4px
+
+  .col-4
+    .skills
+      margin-bottom: 20px
+      margin-left: -10px
+    .skills__item
+      display: inline-block
+      width: 134px
+      margin-left: 10px
+    .teacher
+      padding-bottom: 16px
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12)
+      clearfix()
+      &__avatar
+        float: left
+      &__info
+        padding-left: 76px
+    .btn
+      &-black,
+      &-light-green,
+      &-red
+        width: calc(50% - 4px)
+  .col-2
+    .skills
+      margin-bottom: 30px
+    .skills__item
+      width: 124px
+      margin-top: 10px
+      &:first-child
+        margin-top: 0
+
+    .btn
+      &-light-green
+        width: 100%
+    .teacher
+      &__avatar
+        margin-bottom: 10px
+  .btn
+    display: inline-block

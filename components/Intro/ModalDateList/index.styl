@@ -1,0 +1,50 @@
+.modal-date-list
+  height: 100%
+  width: 210px
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  z-index: 1001
+  //margin: auto
+  &__container
+    display: flex
+    justify-content: center;
+    //justify-content: flex-end;
+    flex-direction column
+    position: absolute
+    height: 100%
+    width: 100%
+    border-left: 4px solid #000
+    border-right: 4px solid #000
+    background-color: #fff
+    z-index: 1001
+    box-sizing (content-box);
+    &:before,
+    &:after
+      content: ''
+      position: absolute
+      left: 0
+      right: 0
+      height: 102px
+      pointer-events: none
+    &:before
+      top: 0
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.55))
+    &:after
+      bottom: 0
+      background: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.55))
+
+  &__item
+    display: inline-block
+    height: 50px
+    line-height: 50px
+    font-size: 16px
+    font-weight: 900
+    text-align: center
+    cursor: pointer
+    &:hover,
+    &:active
+      outline: 1px #000000 solid
+

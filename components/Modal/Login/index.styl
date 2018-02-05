@@ -1,0 +1,95 @@
+.Login
+  .LoginForm
+    clearfix()
+    &__label
+      display block
+      height 71px
+      line-height 70px
+      border-bottom 1px solid #000
+      font-size: 1.4em;
+      padding-left: 39px;
+      letter-spacing: 0;
+    .input__phone
+      height 71px
+      line-height 70px
+      border 0
+      border-bottom 1px solid #000
+      border-left 1px solid #000
+      background transparent
+      outline 0
+      font-size 1.375em
+      padding: 0 21px 14px 21px;
+      letter-spacing: 3px;
+    .login__line
+      position: relative;
+      &:after
+        background: #000;
+        font-size: 1px;
+        line-height: 0;
+        height: 4px;
+        content: ' ';
+        position: absolute;
+        bottom: 14px;
+        display: block;
+        width: 267px;
+        left: 22px;
+    .required
+      color #f00
+  .Login
+    &__buttons
+      clearfix()
+      padding: 21px 17px;
+    &__log
+      background: #f00;
+      display: block;
+      height: 70px;
+      line-height: 70px;
+      text-align: center;
+      font-size: 1.125em;
+      color: #fff;
+      &:hover
+        color #fff
+    &__text
+      font-size: 2.08em;
+      line-height: 0.901em;
+      padding: 35px 0 29px 0;
+      letter-spacing: -0.8px;
+    &__fb,&__vk
+      background: #3b5998 url(/images/modal/ifb.png);
+      color: #fff;
+      height: 70px;
+      padding-left: 72px;
+      line-height: 70px;
+      letter-spacing: 0;
+      position: relative;
+      background-repeat: no-repeat;
+      background-position: 22px 22px;
+      text-decoration: underline
+      cursor: pointer
+      outline: none
+      &:hover
+        color #fff
+        text-decoration underline
+      &:after
+        content: ' ';
+        border-left: 1px solid rgba(255,255,255,.3);
+        position: absolute;
+        left: 53px;
+        display: block;
+        height: 27px;
+        top: 22px;
+    &__vk
+      background-color: #45668e
+      background-image: url(/images/modal/ivk.png)
+      padding-left: 92px;
+      transition(opacity, 0.3s, ease);
+      opacity: 1;
+      &:after
+        left 72px
+    &__fb {
+      font-size: 96%;
+      border: none;
+    }
+    &__soc-disabled {
+      opacity: 0.6;
+    }

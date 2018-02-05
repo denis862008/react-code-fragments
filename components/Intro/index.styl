@@ -1,0 +1,267 @@
+.page__intro
+  height: 100%
+  &__wrapper
+    height: 100%
+  &__overlay
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    background: rgba(255, 255, 255, 0.75)
+    z-index: -1
+    opacity: 0
+    overflow: hidden
+    transition (opacity 0.6s ease)
+
+.page__intro__wrapper.modal-open,
+.page__intro__wrapper.modal-closed
+  .page__intro__overlay
+    z-index: 1000
+
+.page__intro__wrapper.modal-open
+  .page__intro__overlay
+    opacity: 1
+
+.page__intro__wrapper.modal-closed
+  .page__intro__overlay
+    opacity: 0
+
+.page__intro__overlay
+  .modalContainer,
+  .parallax-block__target,
+  .parallax-block,
+  .container
+    height: 100%
+
+.page__intro__overlay
+  .modalContainer
+    height: 100%
+    .modal-intro
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      width: 627px
+      height: 353px
+      margin: auto
+      box-shadow: 0 7px 81px rgba(0, 0, 0, 0.4)
+      border: 4px solid #000000
+      background-color: #ffffff
+      .modal__title
+        border: none
+      &_info-modal
+        padding: 34px 18px 28px
+        box-sizing (border-box)
+
+        .modal__title
+          padding: 0
+          margin: 0 90px 0 254px
+          height: auto
+          font-weight: 900
+          line-height: normal
+
+.page__intro .nFixed
+  position: absolute
+  z-index: 100
+  width: 100%
+  padding: 0 55px
+
+  > .container
+    width: 100%
+
+.intro
+  position: absolute
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  min-width: 1256px
+  padding: 0 55px
+  background-image: url(/images/track/track-bg.jpg)
+  background-repeat: no-repeat
+  background-position: 75% 35%
+  -webkit-background-size: cover
+  background-size: cover
+  overflow: hidden
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1
+
+  .grid
+    > .container
+      width: 100%
+      min-width: 1366px
+      padding: 0 55px
+
+  &__inner
+    position: absolute
+    top: 113px
+    bottom: 55px
+    left: 55px
+    right: 55px
+    //z-index: 10
+    //opacity: 0
+    clearfix()
+    //&_fade-out
+    //  animation: IntroFadeOut 0.4s ease forwards
+    //&_fade-in
+    //  animation: IntroFadeIn 0.4s ease forwards
+
+  .row
+    position: relative
+    height: 100%
+    min-width: 1256px
+    z-index: 10
+
+  [class*="col-"]
+    height: 100%
+    position: relative
+    padding-right: 12px
+
+  .track-item
+    .static-text-section
+      margin-bottom: 18px
+      padding-bottom: 15px
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+
+    .teacher
+      padding-bottom: 0
+      margin-bottom: 0
+      border: none
+
+  .sidebar
+    position: absolute
+    left: 0
+    z-index: 100
+    &_left
+      width: 55px
+      top: 0
+      bottom: 90px
+      background: rgba(0, 0, 0, 0.45)
+
+      a
+        position: absolute
+        text-transform: uppercase
+        text-decoration: underline
+        color: #ffffff
+        transform: rotate(270deg);
+        transform-origin(18px, 0)
+
+        &.achievements
+          top: 224px;
+          padding-right: 30px;
+
+        &.archive
+          bottom: 100px
+    &_bottom
+      bottom: 0
+      height: 55px
+      width: 100%
+      padding: 0 55px
+      border-top: 5px #ffffff solid
+      background: rgba(0, 0, 0, 0.65)
+
+    &__control
+      position: absolute
+      top: 0
+      height: 100%
+      width: 55px
+      line-height: 52px
+      background-color: #252525
+      text-align: center
+      cursor: pointer
+      &:before
+        content: ''
+        display: inline-block
+        width: 17px
+        height: 14px
+      &_left
+        left: 0
+        &:before
+          background: url(/images/intro/arrow-left.svg) no-repeat 0 0
+      &_right
+        right: 0
+        &:before
+          background: url(/images/intro/arrow-right.svg) no-repeat 0 0
+    [class*="col-"]
+      padding: 14px 0 0 17px
+
+    .col-4
+      position: relative
+      &:before,
+      &:after
+        content: ''
+        position: absolute
+        top: -14px
+        width: 22px
+        height: 22px
+        border-radius (100%)
+        background-color: #ffffff
+      &:before
+        left: -11px
+      &:after
+        right: -11px
+
+  .track-item
+    &_intro
+      .track-item__content__inner
+        border-top: 1px #000000 solid
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+        padding: 20px 0
+        box-sizing (border-box)
+        margin-bottom: 18px
+    &_info
+      padding-top: 16px
+      padding-bottom: 16px
+      &:nth-child(2)
+        background: rgba(255, 255, 255, 0.8)
+      &:nth-child(3)
+        background: rgba(255, 255, 255, 0.6)
+      &:nth-child(4)
+        background: rgba(255, 255, 255, 0.5)
+      &:nth-child(5)
+        background: rgba(255, 255, 255, 0.3)
+      &:nth-child(6)
+        background: rgba(255, 255, 255, 0.2)
+
+  .btn
+    display: inline-block
+    vertical-align: middle
+    color: #ffffff
+    &-select-time
+      //width: 181px;
+      margin-right: 10px
+      //border: 1px solid #00e761;
+    &-black
+      background-color: #000000
+    &-reschedule
+      //width: 191px
+      margin-right: 10px
+    &-red
+      background-color: #ff0000
+
+@keyframes IntroFadeOut {
+  0% {
+    opacity: 1
+  }
+  100% {
+    opacity: 0
+  }
+}
+
+@keyframes IntroFadeIn {
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
+}

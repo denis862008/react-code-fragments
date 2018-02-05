@@ -1,0 +1,50 @@
+.info-modal
+  &__wrapper
+    .btn
+      &-info
+        width: 100%
+        height: 70px
+        line-height: 70px
+        font-size: 18px
+        font-weight: 900
+        border: 1px #000000 solid
+        text-align: center
+        box-sizing (border-box)
+  &__inner
+    margin-bottom: 38px
+    clearfix()
+  &__icon
+    float: left
+    width: 182px
+    height: 165px
+    line-height: 165px
+    margin-top: -38px
+    text-align: center
+    box-sizing (content-box)
+    background-position: 100% 50%
+    background-repeat: no-repeat
+    &_reschedule
+      background-image: url(/images/intro/smarted-ico-reschedule.svg)
+    &_cancelTime
+      background-image: url(/images/intro/smarted-ico-intro-cancel.svg)
+    &_successSelectTime
+      background-image: url(/images/intro/smarted-ico-intro-success.svg)
+  &__content
+    margin-left: 254px
+    padding-top: 20px
+    padding-right: 26px
+
+    &__text__default
+      font-size: 19px
+      font-weight: 700
+      line-height: 26px
+      margin-bottom: 25px
+
+      p
+        margin: 0
+
+    &__text__selected
+      font-size: 14px
+      font-weight: 600
+      color: #ff0000
+      line-height: 19px

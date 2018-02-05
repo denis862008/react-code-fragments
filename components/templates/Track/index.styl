@@ -1,0 +1,110 @@
+.page__track .nFixed
+  position: absolute
+  z-index: 100
+  width: 100%
+  padding: 0 55px
+
+  > .container
+    width: 100%
+
+.track
+  position: absolute
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  //min-width: 100vw
+  min-width: 1256px
+  padding: 0 55px
+  background-image: url(/images/track/track-bg.jpg)
+  background-repeat: no-repeat
+  background-position: 75% 35%
+  -webkit-background-size: cover
+  background-size: cover
+  overflow: hidden
+
+  &__inner
+    position: absolute
+    top: 113px
+    bottom: 90px
+    left: 55px
+    right: 55px
+    //overflow: hidden
+    clearfix()
+
+  .row
+    position: relative
+    height: 100%
+    width: calc(2 * 100vw - 110px)
+    min-width: 2512px;
+    z-index: 10
+    clearfix()
+    &__item
+      float: left
+      position: relative
+      height: 100%
+      width: calc(100vw - 110px)
+      //min-width: calc(100vw - 110px);
+      min-width: 1256px;
+      visibility: hidden;
+      transition(all, 0.3s, ease)
+      &:first-child
+        visibility: visible
+
+  [class*="col-"]
+    height: 100%
+    position: relative
+    padding-right: 12px
+    //z-index: 10
+
+  #scroller-col
+    width: 100%
+    height: 100%
+
+  .grid
+    > .container
+      width: 100%
+      min-width: 1366px
+      padding: 0 55px
+
+  .sidebar
+    position: absolute
+    left: 0
+    z-index: 100
+    &_left
+      width: 55px
+      top: 0
+      bottom: 90px
+      background: rgba(0, 0, 0, 0.45)
+
+      a
+        position: absolute
+        text-transform: uppercase
+        text-decoration: underline
+        color: #ffffff
+        transform: rotate(270deg);
+        transform-origin(18px, 0)
+
+        &.achievements
+          top: 224px;
+          padding-right: 30px;
+
+        &.archive
+          bottom: 100px
+    &_bottom
+      bottom: 0
+      height: 90px
+      width: 100%
+      padding: 0 55px
+      border-top: 5px #ffffff solid
+      background: rgba(0, 0, 0, 0.5)
+
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1
